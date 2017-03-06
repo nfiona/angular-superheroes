@@ -9,14 +9,13 @@
 </head>
 <body ng-controller="superheroesCtrl as vm">
   <h1>Who You Gonna Call ??</h1>
-  <div ng-repeat="superhero in vm.superheroes">
+    <input type="text" ng-model="search" placeholder="Search Superhero">
+  <div ng-repeat="superhero in vm.superheroes | filter:search" >
     <h2> {{$index + 1}}. {{superhero.name}} </h2>
     <h3> Phone Number: {{superhero.phone}} | Affiliation: {{superhero.affiliation}}   </h3>
-    <div class="hero-image">
-      <img ng-src="{{superhero.img_url}}">
-    </div>
-
-
+      <div class="hero-image">
+        <img ng-src="{{superhero.img_url}}">
+      </div>
   </div>
 
 
