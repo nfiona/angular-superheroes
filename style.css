@@ -1,1 +1,8 @@
+body {
+  text-align: center;
+}
 
+.hero-image img {
+  max-width: 400px;
+  border-radius: 100px;
+}
