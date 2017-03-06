@@ -16,4 +16,8 @@
 
   function superheroesController () {
     this.superheroes = superheroData
+    this.addHero = function() {
+      let hero = {name: this.newHero , phone: this.newPhone, affiliation: this.newAffiliation , img_url: this.newImage}
+      this.superheroes.push(hero)
+    };
   }

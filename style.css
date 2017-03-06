@@ -1,5 +1,14 @@
 body {
   text-align: center;
+  background-image: url(https://static1.squarespace.com/static/539f3dbde4b0514810beca18/t/55683796e4b0890a6c98fcf3/1432893335168/Black-Brick-Wall-Background.jpg?format=1500w);
+}
+
+h1 {
+  color: white;
+}
+
+h5 {
+  color: white;
 }
 
 .hero-image img {
