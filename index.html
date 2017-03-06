@@ -8,7 +8,7 @@
     .blue{ color: blue }
     .red{ color: red }
     .green{color: green}
-    .pink{color: pink }
+    .purple{color: purple}
     .orange{color: orange }
   </style>
 </head>
@@ -16,11 +16,11 @@
   <h1>Who You Gonna Call ??</h1>
     <input type="text" ng-model="search" placeholder="Search Superhero">
 
-  <div ng-class="{'blue':superhero.affiliation === 'Marvel', 'red':superhero.affiliation === 'B.P.R.D', 'green' :superhero.affiliation === 'DC Comics', 'pink' :superhero.affiliation === 'Ultraman Millenium', 'orange' :superhero.affiliation === 'Targaryen'}" ng-repeat="superhero in vm.superheroes | filter:search" >
-    <h2> {{$index + 1}}. {{superhero.name}} </h2>
+  <div ng-class="{'blue':superhero.affiliation === 'Marvel', 'red':superhero.affiliation === 'B.P.R.D', 'green' :superhero.affiliation === 'DC Comics', 'purple' :superhero.affiliation === 'Ultraman Millenium', 'orange' :superhero.affiliation === 'Targaryen'}" ng-repeat="superhero in vm.superheroes | filter:search" >
+    <h2> {{$index + 1}}. {{superhero.name}} </h2>  <button ng-click="vm.viewImg[$index] = !vm.viewImg[$index]">View Photo</button>
     <h3> Phone Number: {{superhero.phone}} | Affiliation: {{superhero.affiliation}}   </h3>
       <div class="hero-image">
-        <img ng-src="{{superhero.img_url}}">
+        <img ng-src="{{superhero.img_url}}" ng-show="vm.viewImg[$index]" />
       </div>
   </div>
 
